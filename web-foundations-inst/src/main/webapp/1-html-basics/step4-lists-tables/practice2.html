@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>고급 목록 활용</title>
+</head>
+<body>
+    <h1>중첩 목록과 고급 활용</h1>
+    
+    <!-- 중첩된 순서 없는 목록 -->
+    <h2>웹 개발 학습 계획</h2>
+    <ul>
+        <li>프론트엔드 개발
+            <ul>
+                <!-- ul 안에 다시 ul을 넣어서 하위 목록 생성 -->
+                <li>HTML 기초</li>
+                <li>CSS 스타일링
+                    <ul>
+                        <li>선택자</li>
+                        <li>박스 모델</li>
+                        <li>Flexbox</li>
+                        <li>Grid</li>
+                    </ul>
+                </li>
+                <li>JavaScript 프로그래밍</li>
+                <li>React 프레임워크</li>
+            </ul>
+        </li>
+        <li>백엔드 개발
+            <ul>
+                <li>Node.js</li>
+                <li>데이터베이스 (MySQL)</li>
+                <li>API 개발</li>
+            </ul>
+        </li>
+        <li>DevOps
+            <ul>
+                <li>Git 버전 관리</li>
+                <li>AWS 클라우드</li>
+                <li>Docker 컨테이너</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <!-- 중첩된 순서 있는 목록 -->
+    <h2>프로젝트 진행 단계</h2>
+    <ol>
+        <li>기획 단계
+            <ol type="a">
+                <!-- type="a": 소문자 알파벳으로 번호 매기기 -->
+                <li>요구사항 분석</li>
+                <li>기능 정의</li>
+                <li>UI/UX 설계</li>
+            </ol>
+        </li>
+        <li>개발 단계
+            <ol type="a">
+                <li>환경 설정</li>
+                <li>데이터베이스 설계</li>
+                <li>백엔드 API 개발</li>
+                <li>프론트엔드 개발</li>
+            </ol>
+        </li>
+        <li>배포 단계
+            <ol type="a">
+                <li>테스팅</li>
+                <li>서버 배포</li>
+                <li>도메인 연결</li>
+            </ol>
+        </li>
+    </ol>
+    
+    <!-- 특수한 번호 매기기 -->
+    <h2>중요도별 우선순위</h2>
+    <ol type="I">
+        <!-- type="I": 대문자 로마숫자 -->
+        <li>긴급하고 중요한 일</li>
+        <li>긴급하지 않지만 중요한 일</li>
+        <li>긴급하지만 중요하지 않은 일</li>
+        <li>긴급하지도 중요하지도 않은 일</li>
+    </ol>
+    
+    <!-- 시작 번호 지정 -->
+    <h2>책 목차 (5장부터)</h2>
+    <ol start="5">
+        <!-- start="5": 5번부터 시작 -->
+        <li>CSS 기초</li>
+        <li>CSS 고급</li>
+        <li>JavaScript 입문</li>
+        <li>DOM 조작</li>
+    </ol>
+    
+</body>
+</html>

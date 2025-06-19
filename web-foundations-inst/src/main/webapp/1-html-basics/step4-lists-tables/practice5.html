@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>카페 메뉴판</title>
+</head>
+<body>
+    <h1>☕ 행복한 카페 메뉴판</h1>
+
+    <!-- 목차 (순서 없는 목록) -->
+    <h2>메뉴 카테고리</h2>
+    <ul>
+        <li><a href="#coffee">커피 ☕</a></li>
+        <li><a href="#tea">차 🍵</a></li>
+        <li><a href="#dessert">디저트 🍰</a></li>
+        <li><a href="#meal">식사 🍽️</a></li>
+    </ul>
+
+    <hr>
+
+    <!-- 커피 메뉴 (테이블) -->
+    <section id="coffee">
+        <h2>☕ 커피 메뉴</h2>
+        <table border="1">
+            <caption>신선한 원두로 내린 커피 메뉴</caption>
+            <thead>
+                <tr>
+                    <th scope="col">메뉴명</th>
+                    <th scope="col">HOT</th>
+                    <th scope="col">ICE</th>
+                    <th scope="col">특징</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">아메리카노</th>
+                    <td>4,000원</td>
+                    <td>4,500원</td>
+                    <td>진한 에스프레소의 깊은 맛</td>
+                </tr>
+                <tr>
+                    <th scope="row">카페라떼</th>
+                    <td>4,800원</td>
+                    <td>5,300원</td>
+                    <td>부드러운 우유와 에스프레소의 조화</td>
+                </tr>
+                <tr>
+                    <th scope="row">카푸치노</th>
+                    <td>5,000원</td>
+                    <td>-</td>
+                    <td>풍성한 우유 거품이 특징</td>
+                </tr>
+                <tr>
+                    <th scope="row">바닐라라떼</th>
+                    <td>5,500원</td>
+                    <td>6,000원</td>
+                    <td><em>시그니처 메뉴</em> ⭐</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 차 메뉴 (목록) -->
+    <section id="tea">
+        <h2>🍵 차 메뉴</h2>
+        <h3>허브티</h3>
+        <ul>
+            <li><strong>캐모마일</strong> - 5,000원
+                <small>(진정 효과, 숙면에 도움)</small></li>
+            <li><strong>페퍼민트</strong> - 4,500원
+                <small>(상쾌한 맛, 소화에 도움)</small></li>
+            <li><strong>라벤더</strong> - 5,500원
+                <small>(향긋한 향, 스트레스 완화)</small></li>
+        </ul>
+
+        <h3>전통차</h3>
+        <ol>
+            <li><strong>녹차</strong> - 4,000원</li>
+            <li><strong>홍차</strong> - 4,500원</li>
+            <li><strong>우롱차</strong> - 5,000원</li>
+        </ol>
+    </section>
+
+    <!-- 디저트 메뉴 (테이블) -->
+    <section id="dessert">
+        <h2>🍰 디저트 메뉴</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th scope="col">디저트명</th>
+                    <th scope="col">가격</th>
+                    <th scope="col">칼로리</th>
+                    <th scope="col">추천 음료</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">치즈케이크</th>
+                    <td>6,500원</td>
+                    <td>350kcal</td>
+                    <td>아메리카노</td>
+                </tr>
+                <tr>
+                    <th scope="row">초콜릿 브라우니</th>
+                    <td>5,500원</td>
+                    <td>420kcal</td>
+                    <td>카페라떼</td>
+                </tr>
+                <tr>
+                    <th scope="row">마카롱 (5개)</th>
+                    <td>8,000원</td>
+                    <td>300kcal</td>
+                    <td>허브티</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 식사 메뉴 (정의 목록) -->
+    <section id="meal">
+        <h2>🍽️ 간단한 식사</h2>
+        <dl>
+            <dt><strong>샌드위치 세트</strong> - 8,500원</dt>
+            <dd>신선한 야채와 햄이 들어간 샌드위치 + 감자칩 + 음료</dd>
+
+            <dt><strong>파스타</strong> - 12,000원</dt>
+            <dd>토마토 또는 크림 파스타 (빵 포함)</dd>
+
+            <dt><strong>샐러드</strong> - 9,500원</dt>
+            <dd>계절 야채와 닭가슴살이 들어간 건강한 샐러드</dd>
+        </dl>
+    </section>
+
+    <!-- 카페 정보 -->
+    <hr>
+    <h2>카페 정보</h2>
+    <h3>운영시간</h3>
+    <ul>
+        <li><strong>평일:</strong> 07:00 - 22:00</li>
+        <li><strong>주말:</strong> 08:00 - 23:00</li>
+        <li><strong>공휴일:</strong> 09:00 - 21:00</li>
+    </ul>
+
+    <h3>주문 방법</h3>
+    <ol>
+        <li>메뉴 선택</li>
+        <li>카운터에서 주문 및 결제</li>
+        <li>주문번호 확인</li>
+        <li>완성되면 호출</li>
+    </ol>
+
+    <p><a href="#top">맨 위로 이동</a></p>
+    <div id="top"></div>
+
+</body>
+</html>

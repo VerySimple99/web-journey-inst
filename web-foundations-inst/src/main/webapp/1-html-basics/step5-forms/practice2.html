@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>다양한 입력 타입</title>
+</head>
+<body>
+    <h1>설문조사 폼</h1>
+
+    <form action="survey.jsp" method="post">
+
+        <!-- 개인정보 섹션 -->
+        <fieldset>
+            <!-- fieldset: 관련된 폼 요소들을 그룹화 -->
+            <legend>개인 정보</legend>
+            <!-- legend: fieldset의 제목 -->
+
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" placeholder="홍길동">
+            <!-- placeholder: 입력 힌트 텍스트 -->
+            <br><br>
+
+            <label for="age">나이:</label>
+            <input type="number" id="age" name="age" min="1" max="100">
+            <!-- type="number": 숫자만 입력 가능 -->
+            <!-- min, max: 최소값, 최대값 설정 -->
+            <br><br>
+
+            <label for="birthday">생년월일:</label>
+            <input type="date" id="birthday" name="birthday">
+            <!-- type="date": 날짜 선택기 표시 -->
+            <br><br>
+
+            <label for="website">개인 웹사이트:</label>
+            <input type="url" id="website" name="website" placeholder="https://example.com">
+            <!-- type="url": URL 형식 검증 -->
+            <br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- 선호도 섹션 -->
+        <fieldset>
+            <legend>선호도 조사</legend>
+
+            <!-- 라디오 버튼 (단일 선택) -->
+            <p>좋아하는 계절은?</p>
+            <input type="radio" id="spring" name="season" value="spring">
+            <label for="spring">봄</label>
+            <!-- type="radio": 여러 옵션 중 하나만 선택 -->
+            <!-- name이 같은 라디오 버튼들은 하나의 그룹 -->
+
+            <input type="radio" id="summer" name="season" value="summer">
+            <label for="summer">여름</label>
+
+            <input type="radio" id="fall" name="season" value="fall">
+            <label for="fall">가을</label>
+
+            <input type="radio" id="winter" name="season" value="winter">
+            <label for="winter">겨울</label>
+            <br><br>
+
+            <!-- 체크박스 (다중 선택) -->
+            <p>좋아하는 음식은? (복수 선택 가능)</p>
+            <input type="checkbox" id="korean" name="food" value="korean">
+            <label for="korean">한식</label>
+            <!-- type="checkbox": 여러 옵션 중 복수 선택 가능 -->
+
+            <input type="checkbox" id="chinese" name="food" value="chinese">
+            <label for="chinese">중식</label>
+
+            <input type="checkbox" id="western" name="food" value="western">
+            <label for="western">양식</label>
+
+            <input type="checkbox" id="japanese" name="food" value="japanese">
+            <label for="japanese">일식</label>
+            <br><br>
+
+            <!-- 드롭다운 선택 -->
+            <label for="education">최종 학력:</label>
+            <select id="education" name="education">
+                <!-- select: 드롭다운 목록 -->
+                <option value="">선택하세요</option>
+                <!-- option: 선택 가능한 항목 -->
+                <option value="high">고등학교 졸업</option>
+                <option value="college">전문대학 졸업</option>
+                <option value="university">대학교 졸업</option>
+                <option value="graduate">대학원 졸업</option>
+            </select>
+            <br><br>
+
+            <!-- 다중 선택 리스트 -->
+            <label for="skills">보유 기술: (Ctrl+클릭으로 다중 선택)</label><br>
+            <select id="skills" name="skills" multiple size="5">
+                <!-- multiple: 다중 선택 허용 -->
+                <!-- size: 보여지는 옵션 개수 -->
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="sql">SQL</option>
+            </select>
+            <br><br>
+
+            <!-- 텍스트 영역 (여러 줄 입력) -->
+            <label for="comment">의견:</label><br>
+            <textarea id="comment" name="comment" rows="5" cols="50"
+                      placeholder="자유롭게 의견을 작성해주세요"></textarea>
+            <!-- textarea: 여러 줄 텍스트 입력 -->
+            <!-- rows: 표시될 줄 수 -->
+            <!-- cols: 표시될 열 수 -->
+
+        </fieldset>
+
+        <br>
+
+        <!-- 파일 업로드 -->
+        <label for="photo">프로필 사진:</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+        <!-- type="file": 파일 선택 -->
+        <!-- accept: 허용할 파일 형식 -->
+        <br><br>
+
+        <!-- 숨겨진 입력 -->
+        <input type="hidden" name="survey_id" value="2025_spring">
+        <!-- type="hidden": 사용자에게 보이지 않는 데이터 -->
+
+        <!-- 버튼들 -->
+        <input type="submit" value="설문 제출">
+        <input type="reset" value="초기화">
+
+    </form>
+
+</body>
+</html>

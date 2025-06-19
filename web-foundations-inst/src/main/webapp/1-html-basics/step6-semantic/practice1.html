@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>시맨틱 태그 기본 구조</title>
+</head>
+<body>
+
+    <!-- 페이지 상단 영역 -->
+    <header>
+        <!-- header: 페이지나 섹션의 머리말 영역 -->
+        <h1>웹 개발 블로그</h1>
+        <p>프론트엔드와 백엔드 개발 이야기</p>
+    </header>
+
+    <!-- 네비게이션 영역 -->
+    <nav>
+        <!-- nav: 사이트 내 네비게이션 링크 그룹 -->
+        <ul>
+            <li><a href="#home">홈</a></li>
+            <li><a href="#frontend">프론트엔드</a></li>
+            <li><a href="#backend">백엔드</a></li>
+            <li><a href="#about">소개</a></li>
+        </ul>
+    </nav>
+
+    <!-- 주요 콘텐츠 영역 -->
+    <main>
+        <!-- main: 페이지의 주요 콘텐츠 (페이지당 하나만 사용) -->
+
+        <!-- 콘텐츠 섹션 -->
+        <section id="frontend">
+            <!-- section: 관련된 콘텐츠의 그룹, 제목이 있는 의미적 구역 -->
+            <h2>프론트엔드 개발</h2>
+
+            <!-- 독립적인 콘텐츠 -->
+            <article>
+                <!-- article: 독립적으로 배포 가능한 콘텐츠 -->
+                <h3>HTML5 시맨틱 태그 활용법</h3>
+                <p><strong>작성일:</strong> 2025년 6월 18일</p>
+                <p>HTML5 시맨틱 태그를 사용하면 더 의미있는 웹 문서를 만들 수 있습니다...</p>
+            </article>
+
+            <article>
+                <h3>CSS Flexbox 완전 정복</h3>
+                <p><strong>작성일:</strong> 2025년 6월 15일</p>
+                <p>Flexbox를 사용하면 복잡한 레이아웃도 쉽게 구현할 수 있습니다...</p>
+            </article>
+
+        </section>
+
+        <section id="backend">
+            <h2>백엔드 개발</h2>
+
+            <article>
+                <h3>Spring Boot 시작하기</h3>
+                <p><strong>작성일:</strong> 2025년 6월 10일</p>
+                <p>Spring Boot로 빠르게 웹 애플리케이션을 만들어보겠습니다...</p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- 사이드바 영역 -->
+    <aside>
+        <!-- aside: 주요 콘텐츠와 간접적으로 관련된 부가 정보 -->
+        <h3>인기 글</h3>
+        <ul>
+            <li><a href="#">JavaScript 비동기 처리</a></li>
+            <li><a href="#">React 컴포넌트 설계</a></li>
+            <li><a href="#">Java 객체지향 프로그래밍</a></li>
+        </ul>
+
+        <h3>카테고리</h3>
+        <ul>
+            <li>HTML/CSS (15)</li>
+            <li>JavaScript (23)</li>
+            <li>Java (18)</li>
+            <li>Spring (12)</li>
+        </ul>
+    </aside>
+
+    <!-- 페이지 하단 영역 -->
+    <footer>
+        <!-- footer: 페이지나 섹션의 바닥글 영역 -->
+        <p>&copy; 2025 웹 개발 블로그. 모든 권리 보유.</p>
+        <p>문의: contact@webdev-blog.com</p>
+    </footer>
+
+</body>
+</html>

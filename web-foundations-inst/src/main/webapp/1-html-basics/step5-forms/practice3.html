@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- HTML5 문서임을 선언하는 DOCTYPE -->
+<html lang="ko">
+<!-- 문서 전체를 감싸는 html 태그, lang="ko"로 한국어 문서임을 명시 -->
+<head>
+    <!-- 웹페이지의 메타정보를 담는 head 영역 (화면에 보이지 않음) -->
+    <meta charset="UTF-8">
+    <!-- 문자 인코딩을 UTF-8로 설정하여 한글 깨짐 방지 -->
+    <title>접근성 친화적 폼</title>
+    <!-- 브라우저 탭에 표시될 제목 -->
+</head>
+<body>
+    <!-- 실제로 화면에 보이는 내용들이 들어가는 body 영역 -->
+    
+    <h1>온라인 주문 폼</h1>
+    <!-- 페이지의 주요 제목, 검색엔진과 스크린 리더가 가장 중요하게 인식 -->
+
+    <form action="order.jsp" method="post">
+        <!-- 폼의 시작
+             action="order.jsp": 폼 데이터를 처리할 서버 페이지 주소
+             method="post": 데이터 전송 방식 (post는 보안이 중요한 데이터에 사용) -->
+
+        <!-- 고객 정보 -->
+        <fieldset>
+            <!-- fieldset: 관련된 폼 요소들을 논리적으로 그룹화
+                 시각적으로는 박스로 표시되고, 스크린 리더는 그룹으로 인식 -->
+            <legend>주문자 정보</legend>
+            <!-- legend: fieldset의 제목/설명
+                 스크린 리더가 이 그룹에 진입할 때 먼저 읽어줌 -->
+
+            <p>
+                <!-- p 태그로 각 입력 필드를 구분하여 가독성 향상 -->
+                <label for="customer-name">이름 <span style="color: red;">*</span></label><br>
+                <!-- label: 입력 필드의 설명 라벨
+                     for="customer-name": id가 "customer-name"인 input과 연결
+                     빨간 별표(*)로 필수 입력 필드임을 시각적으로 표시 -->
+                <input type="text" id="customer-name" name="customerName"
+                       required aria-describedby="name-help">
+                <!-- input: 사용자 입력을 받는 태그
+                     type="text": 일반 텍스트 입력
+                     id="customer-name": 라벨과 연결하기 위한 고유 식별자
+                     name="customerName": 서버로 전송될 때 사용되는 변수명
+                     required: HTML5 필수 입력 속성 (빈 값으로 제출 시 에러)
+                     aria-describedby="name-help": 접근성을 위해 설명 텍스트와 연결 -->
+                <br>
+                <!-- br: 줄바꿈 태그 -->
+                <small id="name-help">실명을 정확히 입력해주세요.</small>
+                <!-- small: 작은 글씨나 부가 설명에 사용
+                     id="name-help": aria-describedby와 연결되어 스크린 리더가 읽어줌 -->
+            </p>
+
+            <p>
+                <label for="phone">연락처 <span style="color: red;">*</span></label><br>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="010-1234-5678"
+                       pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
+                <!-- type="tel": 전화번호 입력용 (모바일에서 숫자 키패드 표시)
+                     placeholder: 입력 힌트 텍스트 (실제 값이 아님)
+                     pattern: 정규식으로 입력 형식 제한
+                     [0-9]{3}: 숫자 3자리, -: 하이픈, [0-9]{4}: 숫자 4자리 패턴 -->
+            </p>
+
+            <p>
+                <label for="delivery-address">배송 주소</label><br>
+                <!-- 필수가 아닌 필드는 빨간 별표 없음 -->
+                <textarea id="delivery-address" name="deliveryAddress"
+                          rows="3" cols="40"
+                          placeholder="상세 주소까지 정확히 입력해주세요"></textarea>
+                <!-- textarea: 여러 줄 텍스트 입력
+                     rows="3": 화면에 보여질 줄 수
+                     cols="40": 화면에 보여질 글자 수 (대략적)
+                     실제 크기는 CSS로 조정하는 것이 권장됨 -->
+            </p>
+        </fieldset>
+
+        <!-- 상품 선택 -->
+        <fieldset>
+            <legend>주문 상품</legend>
+
+            <p>상품을 선택하세요:</p>
+            <!-- 체크박스 그룹에 대한 설명 -->
+
+            <div>
+                <!-- div: 각 체크박스 항목을 그룹화 (시각적 구분) -->
+                <input type="checkbox" id="laptop" name="product" value="laptop">
+                <!-- type="checkbox": 여러 개 중 복수 선택 가능
+                     value="laptop": 체크된 상태로 전송될 때의 값 -->
+                <label for="laptop">노트북 (120만원)</label>
+                <!-- 체크박스 옆의 텍스트를 클릭해도 체크박스가 선택됨 -->
+            </div>
+
+            <div>
+                <input type="checkbox" id="mouse" name="product" value="mouse">
+                <label for="mouse">마우스 (3만원)</label>
+                <!-- 같은 name을 가진 체크박스들은 배열 형태로 서버에 전송됨 -->
+            </div>
+
+            <div>
+                <input type="checkbox" id="keyboard" name="product" value="keyboard">
+                <label for="keyboard">키보드 (8만원)</label>
+            </div>
+
+        </fieldset>
+
+        <!-- 배송 옵션 -->
+        <fieldset>
+            <legend>배송 방법</legend>
+
+            <div>
+                <input type="radio" id="standard" name="delivery" value="standard" checked>
+                <!-- type="radio": 여러 개 중 하나만 선택 가능
+                     같은 name을 가진 라디오 버튼들은 하나의 그룹
+                     checked: 페이지 로딩 시 기본으로 선택된 상태 -->
+                <label for="standard">일반 배송 (무료, 2-3일)</label>
+            </div>
+
+            <div>
+                <input type="radio" id="express" name="delivery" value="express">
+                <label for="express">빠른 배송 (+3000원, 1일)</label>
+                <!-- 같은 name="delivery"이므로 위의 라디오 버튼과 하나의 그룹 -->
+            </div>
+
+        </fieldset>
+
+        <!-- 결제 정보 -->
+        <fieldset>
+            <legend>결제 방법</legend>
+
+            <label for="payment">결제 수단:</label>
+            <!-- 드롭다운과 라벨을 한 줄에 배치 -->
+            <select id="payment" name="payment" required>
+                <!-- select: 드롭다운 목록
+                     required: 필수 선택 (빈 option 선택 시 에러) -->
+                <option value="">선택하세요</option>
+                <!-- value=""인 빈 옵션: 사용자가 반드시 선택하도록 유도 -->
+                <option value="card">신용카드</option>
+                <!-- option: 선택 가능한 각 항목
+                     value: 서버로 전송될 실제 값 -->
+                <option value="bank">계좌이체</option>
+                <option value="phone">휴대폰 결제</option>
+            </select>
+
+        </fieldset>
+
+        <br>
+        <!-- fieldset 그룹들 사이의 시각적 간격 -->
+
+        <!-- 약관 동의 -->
+        <p>
+            <input type="checkbox" id="agree" name="agree" required>
+            <!-- 단일 체크박스: 약관 동의용
+                 required로 필수 체크 설정 -->
+            <label for="agree">주문 약관에 동의합니다 <span style="color: red;">*</span></label>
+            <!-- 체크박스와 설명 텍스트를 연결 -->
+        </p>
+
+        <!-- 제출 버튼 -->
+        <p>
+            <input type="submit" value="주문하기">
+            <!-- type="submit": 폼 데이터를 서버로 전송하는 버튼
+                 value: 버튼에 표시될 텍스트 -->
+            <input type="button" value="취소" onclick="history.back()">
+            <!-- type="button": 일반 버튼 (폼 전송 기능 없음)
+                 onclick="history.back()": 이전 페이지로 돌아가는 JavaScript 코드
+                 실무에서는 별도 JavaScript 함수로 분리하는 것이 권장됨 -->
+        </p>
+
+    </form>
+    <!-- 폼의 끝 -->
+
+</body>
+</html>
+
+<!--
+이 폼의 접근성 고려사항:
+1. 모든 input에 적절한 label 연결
+2. fieldset과 legend로 논리적 그룹화
+3. aria-describedby로 추가 설명 제공
+4. required 속성으로 필수 입력 명시
+5. placeholder로 입력 가이드 제공
+6. pattern으로 입력 형식 제한
+
+실무 팁:
+- CSS로 스타일링하여 시각적 개선
+- JavaScript로 실시간 유효성 검사 추가
+- 서버 측에서도 데이터 검증 필수
+- HTTPS 사용으로 보안 강화
+-->

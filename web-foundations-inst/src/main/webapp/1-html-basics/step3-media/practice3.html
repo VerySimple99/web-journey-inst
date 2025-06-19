@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>멀티미디어 갤러리</title>
+</head>
+<body>
+    <h1>김철수의 포트폴리오 갤러리</h1>
+
+    <!-- 네비게이션 -->
+    <p>
+        <a href="#photos">사진</a> |
+        <a href="#videos">동영상</a> |
+        <a href="#audio">오디오</a>
+    </p>
+
+    <hr>
+
+    <!-- 사진 섹션 -->
+    <section id="photos">
+        <h2>📸 사진 갤러리</h2>
+
+        <h3>웹 개발 프로젝트</h3>
+        <figure>
+            <img src="project1-screenshot.png"
+                 alt="할일 관리 앱의 메인 화면, 3개의 할일 항목이 체크박스와 함께 나열되어 있음"
+                 width="300">
+            <figcaption>할일 관리 앱 - 메인 화면</figcaption>
+        </figure>
+
+        <figure>
+            <img src="project2-mobile.png"
+                 alt="반응형 블로그의 모바일 화면, 햄버거 메뉴와 글 목록이 세로로 배치됨"
+                 width="200">
+            <figcaption>반응형 블로그 - 모바일 버전</figcaption>
+        </figure>
+
+        <h3>학습 과정</h3>
+        <img src="coding-setup.jpg"
+             alt="개발 환경 사진, 듀얼 모니터에 코드 에디터와 브라우저가 열려있음"
+             width="400">
+        <p>제 개발 환경입니다. 듀얼 모니터로 효율성을 높였어요!</p>
+    </section>
+
+    <hr>
+
+    <!-- 비디오 섹션 -->
+    <section id="videos">
+        <h2>🎥 프로젝트 데모 영상</h2>
+
+        <h3>할일 관리 앱 시연</h3>
+        <video width="500" height="300" controls poster="todo-app-poster.jpg">
+            <source src="todo-app-demo.mp4" type="video/mp4">
+            <source src="todo-app-demo.webm" type="video/webm">
+           <p>브라우저가 비디오를 지원하지 않습니다.</p>
+            <a href="todo-app-demo.mp4">영상 다운로드</a>
+        </video>
+        <p><em>재생시간: 2분 30초</em></p>
+        <p>실제 앱을 사용하는 모습을 보여드립니다. 할일 추가, 완료, 삭제 기능을 확인하세요.</p>
+
+        <h3>코딩 과정 타임랩스</h3>
+        <video width="500" height="300" controls>
+            <source src="coding-timelapse.mp4" type="video/mp4">
+             <p>브라우저가 비디오를 지원하지 않습니다.</p>
+        </video>
+        <p><em>재생시간: 1분 45초</em></p>
+        <p>3시간의 코딩 과정을 1분 45초로 압축한 타임랩스 영상입니다.</p>
+    </section>
+
+    <hr>
+
+    <!-- 오디오 섹션 -->
+    <section id="audio">
+        <h2>🎵 오디오 콘텐츠</h2>
+
+        <h3>개발 경험 공유 팟캐스트</h3>
+        <audio controls>
+            <source src="my-dev-story.mp3" type="audio/mpeg">
+            <source src="my-dev-story.ogg" type="audio/ogg">
+            <p>오디오를 재생할 수 없습니다.</p>
+        </audio>
+        <p><strong>제목:</strong> "신입 개발자의 첫 프로젝트 경험담"</p>
+        <p><strong>재생시간:</strong> 12분 15초</p>
+        <p>처음 웹 개발을 배우면서 겪었던 시행착오와 깨달음을 공유합니다.</p>
+
+        <h3>코딩할 때 듣는 음악</h3>
+        <audio controls>
+            <source src="focus-music.mp3" type="audio/mpeg">
+           <p> 집중에 도움이 되는 음악을 재생할 수 없습니다.</p>
+        </audio>
+        <p>집중력 향상에 도움이 되는 배경음악입니다.</p>
+    </section>  
+
+    <!-- 맨 위로 이동 -->
+    <p><a href="#top">맨 위로 이동</a></p>
+    <div id="top"></div>
+
+</body>
+</html>
