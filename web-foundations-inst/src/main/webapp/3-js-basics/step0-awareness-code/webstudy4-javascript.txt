@@ -18,12 +18,11 @@ HTML을 읽는다 -> HTML 을 파싱한다 -> DOM Tree를 생성한다
 DOM ( Document Object Model ) 
 : javascript에서  web document 의 요소(element : 버튼, div, span ..)를 제어하기 위한 
   프로그래밍 인터페이스를 제공 
-특징 
-트리 구조: HTML 문서는 부모-자식 관계의 노드(Node)들로 구성
-            HTML 문서(document) 요소를 계층적으로 지원 ( DOM Tree ) 
-동적 조작 가능: JavaScript로 실시간으로 요소 추가/삭제/변경 가능
-이벤트 기반: 사용자 행동(클릭, 입력 등)에 반응하여 DOM 변경
-브라우저 API: 웹 브라우저가 제공하는 JavaScript 인터페이스
+  웹브라우저 지원 
+  HTML 문서(document) 요소를 계층적으로 지원 ( DOM Tree ) 
+  하여  button, div , span 과 같은 요소들을 제어하고 조작하기 위한 함수를 제공 
+
+
 
 
 
